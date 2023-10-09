@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Dog</title>
+</head>
+<body>
+    <canvas id="dogCanvas" width="400" height="430"></canvas>
+
+    <script>
+        // Get the canvas element and its 2d context
+        const canvas = document.getElementById('dogCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw the dog's body
+        ctx.fillStyle = 'brown';
+        ctx.beginPath();
+        ctx.arc(200, 300, 100, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw the dog's head
+        ctx.fillStyle = 'brown';
+        ctx.beginPath();
+        ctx.arc(200, 200, 60, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw the dog's eyes
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(175, 180, 10, 0, Math.PI * 2);
+        ctx.arc(225, 180, 10, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw the dog's nose
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(200, 195, 5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw the dog's mouth
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(200, 210, 25, 0, Math.PI);
+        ctx.stroke();
+
+        // Draw the dog's ears
+        ctx.fillStyle = 'brown';
+        ctx.beginPath();
+        ctx.arc(140, 150, 20, 0, Math.PI * 2);
+        ctx.arc(260, 150, 20, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw two circles below the dog's body
+        ctx.fillStyle = 'brown';
+        ctx.beginPath();
+        ctx.arc(150, 390, 15, 0, Math.PI * 2);
+        ctx.arc(250, 390, 15, 0, Math.PI * 2);
+        ctx.fill();
+    </script>
+</body>
+</html>
